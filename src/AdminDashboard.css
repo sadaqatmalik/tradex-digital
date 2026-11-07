@@ -1,0 +1,3038 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.ad-layout {
+  min-height: 100vh;
+  display: flex;
+  background: #080d18;
+  color: #e8eef9;
+  font-family: Inter, Arial, sans-serif;
+}
+
+.ad-sidebar {
+  width: 245px;
+  min-width: 245px;
+  background: #0d1525;
+  border-right: 1px solid #1d2a40;
+  padding: 24px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ad-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px 30px;
+}
+
+.ad-brand-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #2563eb;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.ad-brand strong {
+  display: block;
+  font-size: 18px;
+}
+
+.ad-brand small {
+  display: block;
+  color: #8492a9;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+.ad-menu-title {
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 0 12px 12px;
+}
+
+.ad-nav {
+  display: grid;
+  gap: 6px;
+}
+
+.ad-nav button {
+  position: relative;
+  border: 0;
+  background: transparent;
+  color: #9eabc0;
+  border-radius: 8px;
+  padding: 13px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 13px;
+}
+
+.ad-nav button:hover,
+.ad-nav button.active {
+  background: #192a46;
+  color: #fff;
+}
+
+.ad-nav button.active {
+  color: #69a0ff;
+}
+
+.ad-nav-icon {
+  width: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.ad-nav-active {
+  position: absolute;
+  right: 0;
+  width: 3px;
+  height: 23px;
+  background: #3b82f6;
+  border-radius: 5px 0 0 5px;
+}
+
+.ad-sidebar-bottom {
+  margin-top: auto;
+  border-top: 1px solid #1d2a40;
+  padding-top: 18px;
+}
+
+.ad-admin-mini,
+.ad-customer-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.ad-admin-mini strong,
+.ad-customer-name strong {
+  display: block;
+  font-size: 11px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ad-admin-mini small,
+.ad-customer-name small {
+  display: block;
+  color: #8290a7;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.ad-avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #1d3d70;
+  color: #9cc3ff;
+  font-weight: 700;
+}
+
+.ad-avatar.small {
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+}
+
+.ad-logout {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #211827;
+  color: #f87171;
+  border: 1px solid #482630;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ad-main {
+  flex: 1;
+  min-width: 0;
+  padding: 28px;
+}
+
+.ad-topbar,
+.ad-panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.ad-topbar {
+  margin-bottom: 25px;
+}
+
+.ad-topbar h1 {
+  font-size: 23px;
+  margin: 0;
+}
+
+.ad-topbar p,
+.ad-panel-heading p {
+  color: #8391a8;
+  font-size: 12px;
+  margin: 7px 0 0;
+}
+
+.ad-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ad-online {
+  color: #4ade80;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ad-online i {
+  width: 7px;
+  height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.ad-refresh,
+.ad-outline-btn,
+.ad-small-btn {
+  border: 1px solid #2a3a54;
+  background: #111c30;
+  color: #cbd5e1;
+  border-radius: 7px;
+  padding: 9px 13px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.ad-welcome {
+  background: linear-gradient(110deg, #132b50, #10203a);
+  border: 1px solid #25446d;
+  border-radius: 12px;
+  padding: 23px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ad-welcome span {
+  color: #75aaff;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.ad-welcome h2 {
+  margin: 8px 0;
+  font-size: 21px;
+}
+
+.ad-welcome p {
+  color: #9aabc4;
+  font-size: 12px;
+  margin: 0;
+}
+
+.ad-welcome-icon {
+  font-size: 45px;
+  color: #5d9aff;
+  padding: 0 15px;
+}
+
+.ad-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.ad-stats-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ad-stat {
+  background: #111a2b;
+  border: 1px solid #202e44;
+  border-radius: 10px;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.ad-stat-label {
+  color: #8e9bb0;
+  font-size: 11px;
+}
+
+.ad-stat h2 {
+  font-size: 22px;
+  margin: 9px 0 0;
+}
+
+.ad-stat-icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #1c3459;
+  color: #70a8ff;
+  font-size: 19px;
+}
+
+.ad-stat-icon.green {
+  background: #12382c;
+  color: #4ade80;
+}
+
+.ad-stat-icon.red {
+  background: #3b2029;
+  color: #fb7185;
+}
+
+.ad-stat-icon.purple {
+  background: #30234b;
+  color: #c4a3ff;
+}
+
+.ad-stat-icon.orange {
+  background: #3b2c1b;
+  color: #fbbf24;
+}
+
+.ad-stat-icon.cyan {
+  background: #12353d;
+  color: #67e8f9;
+}
+
+.ad-panel {
+  background: #111a2b;
+  border: 1px solid #202e44;
+  border-radius: 10px;
+  padding: 19px;
+  margin-bottom: 18px;
+  min-width: 0;
+}
+
+.ad-panel h3 {
+  font-size: 15px;
+  margin: 0 0 7px;
+}
+
+.ad-muted {
+  color: #8593a9;
+  font-size: 12px;
+}
+
+.ad-two-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.ad-two-grid .ad-panel {
+  margin-bottom: 0;
+}
+
+.ad-panel-heading {
+  margin-bottom: 17px;
+}
+
+.ad-search {
+  width: 230px;
+  max-width: 100%;
+  background: #0b1424;
+  border: 1px solid #2a3a54;
+  border-radius: 7px;
+  padding: 10px 12px;
+  color: white;
+  outline: none;
+  font-size: 12px;
+}
+
+.ad-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.ad-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+  text-align: left;
+}
+
+.ad-table-wrap th {
+  color: #8190a7;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 13px 12px;
+  background: #0c1525;
+  white-space: nowrap;
+}
+
+.ad-table-wrap td {
+  border-top: 1px solid #202e44;
+  padding: 13px 12px;
+  font-size: 11px;
+  color: #c4cede;
+  white-space: nowrap;
+}
+
+.ad-balance-actions {
+  display: flex;
+  gap: 5px;
+  margin-top: 7px;
+}
+
+.ad-balance-actions button {
+  border: 0;
+  border-radius: 4px;
+  padding: 4px 7px;
+  font-size: 9px;
+  background: #123a2b;
+  color: #4ade80;
+  cursor: pointer;
+}
+
+.ad-balance-actions button + button {
+  background: #40222b;
+  color: #fb7185;
+}
+
+.ad-icon-btn {
+  background: #1b2b45;
+  border: 1px solid #344966;
+  color: #9fc2ff;
+  border-radius: 6px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.ad-status {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  text-transform: capitalize;
+  background: #263449;
+  color: #cbd5e1;
+}
+
+.ad-status.active,
+.ad-status.approved,
+.ad-status.connected {
+  background: #12382c;
+  color: #4ade80;
+}
+
+.ad-status.pending {
+  background: #42341b;
+  color: #fbbf24;
+}
+
+.ad-status.frozen,
+.ad-status.disabled,
+.ad-status.rejected,
+.ad-status.offline {
+  background: #40232c;
+  color: #fb7185;
+}
+
+.ad-status-row,
+.ad-setting-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #202e44;
+  padding: 13px 0;
+  font-size: 12px;
+}
+
+.ad-setting-row strong {
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+.ad-settings {
+  max-width: 650px;
+}
+
+.ad-danger-btn {
+  background: #3a2029;
+  color: #fb7185;
+  border: 1px solid #6a303d;
+  padding: 10px 15px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.ad-primary-btn {
+  background: #2563eb;
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.ad-primary-btn.full {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.ad-error {
+  padding: 13px;
+  margin-bottom: 18px;
+  border: 1px solid #743a3a;
+  background: #321d25;
+  color: #fca5a5;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
+.ad-error button {
+  float: right;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.ad-loading,
+.ad-empty {
+  text-align: center;
+  color: #8391a8;
+  padding: 35px 15px;
+  font-size: 12px;
+}
+
+.ad-empty span {
+  font-size: 27px;
+  color: #526783;
+}
+
+.ad-address {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ad-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #000b;
+  display: grid;
+  place-items: center;
+  padding: 15px;
+}
+
+.ad-modal {
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  background: #111c30;
+  border: 1px solid #30435f;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 20px 70px #0009;
+}
+
+.ad-modal h2 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.ad-modal p {
+  color: #8e9bb0;
+  font-size: 12px;
+}
+
+.ad-modal label {
+  display: block;
+  margin: 20px 0 8px;
+  font-size: 12px;
+  color: #b7c4d8;
+}
+
+.ad-modal input {
+  width: 100%;
+  padding: 12px;
+  background: #091323;
+  border: 1px solid #30435f;
+  border-radius: 7px;
+  color: white;
+  outline: none;
+}
+
+.ad-modal-close {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  border: 0;
+  background: transparent;
+  color: #aab8cc;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.ad-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .ad-sidebar {
+    width: 205px;
+    min-width: 205px;
+  }
+
+  .ad-main {
+    padding: 20px;
+  }
+
+  .ad-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .ad-layout {
+    display: block;
+  }
+
+  .ad-sidebar {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border-right: 0;
+    border-bottom: 1px solid #1d2a40;
+  }
+
+  .ad-brand {
+    padding: 0 5px 12px;
+  }
+
+  .ad-menu-title,
+  .ad-sidebar-bottom {
+    display: none;
+  }
+
+  .ad-nav {
+    display: flex;
+    overflow-x: auto;
+    gap: 5px;
+    padding-bottom: 3px;
+  }
+
+  .ad-nav button {
+    flex-shrink: 0;
+    padding: 10px;
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .ad-nav-active {
+    display: none;
+  }
+
+  .ad-main {
+    padding: 15px 12px;
+  }
+
+  .ad-topbar {
+    align-items: flex-start;
+  }
+
+  .ad-topbar h1 {
+    font-size: 19px;
+  }
+
+  .ad-top-actions {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 7px;
+  }
+
+  .ad-stats-grid,
+  .ad-stats-grid.three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .ad-stat {
+    padding: 12px;
+  }
+
+  .ad-stat h2 {
+    font-size: 18px;
+  }
+
+  .ad-stat-label {
+    font-size: 10px;
+  }
+
+  .ad-two-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-welcome {
+    padding: 16px;
+  }
+
+  .ad-welcome h2 {
+    font-size: 17px;
+  }
+
+  .ad-panel {
+    padding: 13px;
+  }
+
+  .ad-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ad-search {
+    width: 100%;
+  }
+}
+/* CUSTOMER TABLE ALIGNMENT */
+.ad-customer-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.ad-customer-table th,
+.ad-customer-table td {
+  vertical-align: middle;
+  text-align: left;
+}
+
+.ad-customer-email {
+  overflow-wrap: anywhere;
+  font-size: 12px;
+}
+
+/* COMPACT TRADING CONTROLS */
+.ad-trade-controls {
+  width: 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.ad-trade-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.ad-trade-bottom {
+  width: 100%;
+}
+
+.ad-trade-switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  min-width: 0;
+  cursor: pointer;
+  font-size: 10px;
+  color: #cbd5e1;
+  white-space: nowrap;
+}
+
+.ad-trade-switch input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.ad-trade-slider {
+  position: relative;
+  flex-shrink: 0;
+  width: 27px;
+  height: 15px;
+  border-radius: 20px;
+  background: #475569;
+  transition: 0.2s;
+}
+
+.ad-trade-slider::before {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  background: white;
+  transition: 0.2s;
+}
+
+.ad-trade-switch input:checked + .ad-trade-slider {
+  background: #16a34a;
+}
+
+.ad-trade-switch input:checked + .ad-trade-slider::before {
+  transform: translateX(12px);
+}
+
+.ad-trade-switch input:disabled + .ad-trade-slider {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+@media (max-width: 900px) {
+  .ad-customer-table {
+    min-width: 850px;
+  }
+}
+/* THREE COMPACT SWITCHES IN ONE LINE */
+.ad-trade-controls {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  width: 100%;
+}
+
+.ad-trade-top,
+.ad-trade-bottom {
+  display: contents;
+}
+
+.ad-trade-switch {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.ad-trade-slider {
+  width: 23px;
+  height: 13px;
+}
+
+.ad-trade-slider::before {
+  width: 9px;
+  height: 9px;
+}
+
+.ad-trade-switch input:checked + .ad-trade-slider::before {
+  transform: translateX(10px);
+}
+
+/* SLIM CUSTOMER TABLE COLUMNS */
+.ad-customer-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.ad-customer-table col:nth-child(1) { width: 17%; }
+.ad-customer-table col:nth-child(2) { width: 19%; }
+.ad-customer-table col:nth-child(3) { width: 15%; }
+.ad-customer-table col:nth-child(4) { width: 23%; }
+.ad-customer-table col:nth-child(5) { width: 14%; }
+.ad-customer-table col:nth-child(6) { width: 12%; }
+
+.ad-customer-table th,
+.ad-customer-table td {
+  padding: 10px 8px;
+}
+
+.ad-customer-email {
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.ad-customer-name {
+  gap: 6px;
+}
+/* VERTICAL TRADING SWITCHES */
+.ad-trade-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.ad-trade-top {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ad-trade-bottom {
+  width: auto;
+}
+
+.ad-trade-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90px;
+  gap: 5px;
+  font-size: 10px;
+  white-space: nowrap;
+}
+/* BIGGER SWITCHES, SMALLER LABELS, LEFT ALIGNMENT */
+.ad-trade-controls {
+  align-items: flex-start;
+  padding-left: 0;
+  gap: 7px;
+}
+
+.ad-trade-top {
+  align-items: flex-start;
+  gap: 7px;
+}
+
+.ad-trade-switch {
+  width: 82px;
+  justify-content: space-between;
+  gap: 4px;
+  font-size: 9px;
+  margin-left: -4px;
+}
+
+.ad-trade-slider {
+  width: 36px;
+  height: 19px;
+  flex-shrink: 0;
+}
+
+.ad-trade-slider::before {
+  width: 15px;
+  height: 15px;
+  left: 2px;
+  top: 2px;
+}
+
+.ad-trade-switch input:checked + .ad-trade-slider::before {
+  transform: translateX(17px);
+}
+
+/* =====================================
+   CUSTOMER TABLE ACTIONS - RIGHT ALIGN
+===================================== */
+
+.ad-customer-table th:last-child {
+  text-align: right;
+  padding-right: 22px;
+}
+
+.ad-customer-table td:last-child {
+  text-align: right;
+  padding-right: 18px;
+}
+
+.ad-customer-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.ad-customer-actions .ad-icon-btn {
+  width: 76px;
+  min-width: 76px;
+  height: 58px;
+  padding: 5px 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 8px;
+}
+
+.ad-customer-actions .ad-icon-btn span {
+  display: block;
+  font-size: 19px;
+  line-height: 20px;
+}
+
+.ad-customer-actions .ad-icon-btn small {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 9px;
+  line-height: 12px;
+  white-space: nowrap;
+}
+
+.ad-activity-btn {
+  color: #38bdf8;
+}
+
+.ad-settings-btn {
+  color: #d7e0ef;
+}
+
+
+/* =====================================
+   CUSTOMER SETTINGS MODAL
+===================================== */
+
+.ad-customer-settings-modal {
+  position: relative;
+  width: calc(100% - 30px);
+  max-width: 500px;
+  max-height: 88vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 25px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #344862 #101c30;
+}
+
+.ad-customer-settings-modal .ad-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  left: auto;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.ad-customer-modal-heading {
+  padding-right: 35px;
+  margin-bottom: 18px;
+}
+
+.ad-customer-modal-heading > span {
+  display: block;
+  color: #38bdf8;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 6px;
+}
+
+.ad-customer-modal-heading h2 {
+  font-size: 20px;
+  margin: 0 0 5px;
+}
+
+.ad-customer-modal-heading p {
+  color: #9aabc2;
+  font-size: 12px;
+  margin: 0;
+}
+
+
+/* CUSTOMER INFORMATION */
+
+.ad-customer-settings-modal .ad-setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  margin-bottom: 7px;
+  background: #101c30;
+  border: 1px solid #263750;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.ad-customer-settings-modal .ad-setting-row span {
+  color: #9aabc2;
+  flex-shrink: 0;
+}
+
+.ad-customer-settings-modal .ad-setting-row strong {
+  color: #edf4ff;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+
+
+/* SETTINGS SECTIONS */
+
+.ad-customer-setting-section {
+  padding: 15px;
+  margin-top: 12px;
+  background: #101c30;
+  border: 1px solid #263750;
+  border-radius: 10px;
+}
+
+.ad-customer-setting-section h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e8eef9;
+  margin: 0 0 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #263750;
+}
+
+
+/* INPUT FIELDS */
+
+.ad-customer-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.ad-customer-field:last-child {
+  margin-bottom: 0;
+}
+
+.ad-customer-field > span {
+  color: #aab8cc;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.ad-customer-field input,
+.ad-customer-field select,
+.ad-customer-field textarea {
+  width: 100%;
+  min-width: 0;
+  height: 39px;
+  background: #091323;
+  border: 1px solid #2b3c56;
+  border-radius: 7px;
+  padding: 9px 11px;
+  color: #edf4ff;
+  font-family: inherit;
+  font-size: 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.ad-customer-field textarea {
+  height: auto;
+  min-height: 75px;
+  resize: vertical;
+}
+
+.ad-customer-field input:focus,
+.ad-customer-field select:focus,
+.ad-customer-field textarea:focus {
+  border-color: #38bdf8;
+}
+
+
+/* BUTTONS INSIDE SETTINGS */
+
+.ad-customer-setting-section .ad-primary-btn,
+.ad-customer-setting-section .ad-outline-btn {
+  min-height: 36px;
+  padding: 8px 14px;
+  margin-top: 3px;
+  border-radius: 7px;
+  font-size: 11px;
+}
+
+
+/* WITHDRAWAL SWITCH */
+
+.ad-customer-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #dce7f7;
+  cursor: pointer;
+}
+
+.ad-customer-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.ad-customer-toggle-slider {
+  position: relative;
+  width: 42px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #475569;
+  transition: 0.2s;
+}
+
+.ad-customer-toggle-slider::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.ad-customer-toggle input:checked + .ad-customer-toggle-slider {
+  background: #16a36a;
+}
+
+.ad-customer-toggle input:checked + .ad-customer-toggle-slider::before {
+  transform: translateX(20px);
+}
+
+
+/* CLOSE AND SAVE - BOTTOM RIGHT */
+
+.ad-customer-save-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+  padding-top: 15px;
+  margin-top: 15px;
+  border-top: 1px solid #263750;
+}
+
+.ad-customer-save-actions button {
+  min-width: 90px;
+  min-height: 37px;
+  padding: 9px 15px;
+  border-radius: 7px;
+  font-size: 11px;
+}
+
+.ad-customer-save-actions .ad-primary-btn {
+  min-width: 175px;
+}
+
+
+/* =====================================
+   TRADING ACTIVITY MODAL
+===================================== */
+
+.ad-activity-placeholder {
+  text-align: center;
+  padding: 28px 18px;
+  margin: 16px 0;
+  border: 1px dashed #344862;
+  border-radius: 10px;
+  background: #101c30;
+}
+
+.ad-activity-placeholder > span {
+  display: block;
+  font-size: 30px;
+  color: #38bdf8;
+}
+
+.ad-activity-placeholder h3 {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.ad-activity-placeholder p {
+  color: #9aabc2;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .ad-customer-settings-modal {
+    width: calc(100% - 20px);
+    max-height: 92vh;
+    padding: 18px;
+  }
+
+  .ad-customer-actions {
+    gap: 5px;
+  }
+
+  .ad-customer-actions .ad-icon-btn {
+    width: 65px;
+    min-width: 65px;
+  }
+
+  .ad-customer-save-actions {
+    flex-wrap: wrap;
+  }
+
+  .ad-customer-save-actions .ad-primary-btn {
+    min-width: 150px;
+  }
+}
+
+/* CENTER ACTIONS HEADING AND BUTTONS */
+
+.ad-customer-table th:last-child {
+  text-align: center !important;
+  padding-right: 0 !important;
+}
+
+.ad-customer-table td:last-child {
+  text-align: center !important;
+  padding-right: 0 !important;
+}
+
+.ad-customer-actions {
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+}
+
+
+/* CENTER TRADE CTRL HEADING AND SWITCHES */
+
+.ad-customer-table th:nth-child(4) {
+  text-align: center !important;
+}
+
+.ad-customer-table td:nth-child(4) {
+  text-align: center !important;
+}
+
+.ad-trade-controls {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.ad-trade-top,
+.ad-trade-bottom {
+  justify-content: center !important;
+  align-items: center !important;
+}
+.ad-setting-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 22px;
+  max-width: 650px;
+}
+
+.ad-setting-field label {
+  color: #dce6f5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ad-setting-field input {
+  width: 100%;
+  min-height: 43px;
+  padding: 10px 13px;
+  border: 1px solid #263750;
+  border-radius: 8px;
+  background: #0b1423;
+  color: #fff;
+  outline: none;
+}
+
+.ad-setting-field input:focus {
+  border-color: #299dff;
+}
+
+.ad-setting-field button {
+  align-self: flex-start;
+}
+
+.ad-notice {
+  margin: 18px 0;
+  padding: 13px;
+  border: 1px solid #765b28;
+  border-radius: 8px;
+  background: #302719;
+  color: #f3d69a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.ad-small-btn:disabled,
+.ad-primary-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+/* SETTINGS PAGE - FULL WIDTH CARDS */
+
+.ad-layout main {
+  min-width: 0;
+}
+
+.ad-layout main > section.ad-settings {
+  width: 100%;
+  max-width: 100%;
+  grid-column: 1 / -1;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   TRADEX ADMIN - CLEAN BLUE & WHITE THEME
+   ========================================= */
+
+/* MAIN BACKGROUND */
+.ad-layout,
+.ad-main {
+  background: #f1f5f9 !important;
+  color: #111827 !important;
+}
+
+/* NAVY SIDEBAR */
+.ad-sidebar {
+  background: #0f172a !important;
+  border-right: 1px solid #1e293b !important;
+  box-shadow: none !important;
+}
+
+.ad-sidebar,
+.ad-sidebar * {
+  color: #ffffff !important;
+}
+
+.ad-sidebar .ad-nav button {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.ad-sidebar .ad-nav button.active {
+  background: #60a5fa !important;
+  color: #ffffff !important;
+}
+
+.ad-sidebar .ad-nav button:hover {
+  background: #3b82f6 !important;
+}
+
+/* MAIN HEADINGS */
+.ad-main h1,
+.ad-main h2,
+.ad-main h3,
+.ad-main h4 {
+  color: #2563eb !important;
+}
+
+/* WHITE PANELS */
+.ad-main .ad-panel,
+.ad-main .ad-welcome {
+  background: #ffffff !important;
+  background-image: none !important;
+  color: #111827 !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: none !important;
+}
+
+/* PANEL TEXT */
+.ad-main .ad-panel p,
+.ad-main .ad-panel label,
+.ad-main .ad-panel strong,
+.ad-main .ad-panel span {
+  color: #111827;
+}
+
+/* NAVY TABLE HEADERS */
+.ad-table-wrap th {
+  background: #0f172a !important;
+  color: #ffffff !important;
+}
+
+/* WHITE TABLE BODY */
+.ad-table-wrap td {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* SUMMARY CARDS */
+.ad-main .ad-stats-grid .ad-stat {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  color: #111827 !important;
+}
+
+.ad-main .ad-stats-grid .ad-stat h2,
+.ad-main .ad-stats-grid .ad-stat h3,
+.ad-main .ad-stats-grid .ad-stat-label {
+  color: #38bdf8 !important;
+}
+
+.ad-main .ad-stats-grid .ad-stat p,
+.ad-main .ad-stats-grid .ad-stat span {
+  color: #111827 !important;
+}
+
+/* ADD FUNDS / OTP / SUCCESS BUTTONS */
+.ad-main .ad-primary-btn,
+.ad-main .ad-balance-add,
+.ad-main .ad-balance-actions button.ad-balance-add {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border: 1px solid #16a34a !important;
+}
+
+.ad-main .ad-primary-btn:hover,
+.ad-main .ad-balance-add:hover {
+  background: #15803d !important;
+}
+
+/* DEDUCT BUTTON */
+.ad-main .ad-balance-deduct,
+.ad-main .ad-balance-actions button.ad-balance-deduct {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border: 1px solid #dc2626 !important;
+}
+
+/* LOGOUT / WARNING / CANCEL / DANGER */
+.ad-sidebar .ad-logout,
+.ad-main .ad-danger-btn,
+.ad-main .ad-error button,
+.ad-main .ad-modal-close,
+.ad-main button.ad-cancel-btn,
+.ad-main button.ad-warning-btn {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border: 1px solid #b91c1c !important;
+}
+
+/* STATUS BADGES */
+.ad-status.active,
+.ad-status.approved,
+.ad-status.connected {
+  background: #dcfce7 !important;
+  color: #16a34a !important;
+}
+
+.ad-status.pending {
+  background: #fef3c7 !important;
+  color: #b45309 !important;
+}
+
+.ad-status.frozen,
+.ad-status.disabled,
+.ad-status.rejected,
+.ad-status.offline {
+  background: #fee2e2 !important;
+  color: #dc2626 !important;
+}
+
+/* INPUTS */
+.ad-main input,
+.ad-main select,
+.ad-main textarea {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #cbd5e1 !important;
+}
+
+/* MODALS */
+.ad-main .ad-modal {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-color: #e2e8f0 !important;
+}
+
+.ad-main .ad-modal p,
+.ad-main .ad-modal label {
+  color: #111827 !important;
+}
+
+/* CUSTOMER TABLE ADD / DEDUCT */
+.ad-customer-table .ad-balance-actions button.ad-balance-add {
+  background: #16a34a !important;
+  color: #ffffff !important;
+}
+
+.ad-customer-table .ad-balance-actions button.ad-balance-deduct {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+}
+
+/* TRADING SWITCH ON */
+.ad-trade-switch input:checked + .ad-trade-slider,
+.ad-customer-toggle input:checked + .ad-customer-toggle-slider {
+  background: #16a34a !important;
+}
+/* ======================================
+   MODERN SETTINGS
+====================================== */
+
+.ad-settings-home {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.ad-settings-card {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111827;
+  color: inherit;
+  padding: 28px;
+  border-radius: 16px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  transition: 0.2s ease;
+}
+
+.ad-settings-card:hover {
+  transform: translateY(-3px);
+  border-color: #d4af37;
+}
+
+.ad-settings-card-icon {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  border-radius: 14px;
+  background: rgba(212, 175, 55, 0.12);
+}
+
+.ad-settings-card-content h3 {
+  margin: 0 0 8px;
+}
+
+.ad-settings-card-content p {
+  margin: 0 0 16px;
+  color: #9ca3af;
+  line-height: 1.6;
+}
+
+.ad-settings-card-content span {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.ad-back-btn {
+  background: transparent;
+  border: none;
+  color: #d4af37;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 22px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ad-settings-page-header {
+  margin-bottom: 28px;
+}
+
+.ad-settings-page-header h2 {
+  margin: 0 0 8px;
+}
+
+.ad-admin-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.ad-admin-info-card {
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ad-admin-info-card span {
+  display: block;
+  color: #9ca3af;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.ad-admin-info-card strong {
+  word-break: break-word;
+}
+
+.ad-admin-security-section {
+  margin-top: 22px;
+  padding: 22px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.ad-security-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.ad-security-heading h3 {
+  margin: 0 0 7px;
+}
+
+.ad-security-heading p {
+  margin: 0;
+}
+
+.ad-security-badge {
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  background: rgba(212, 175, 55, 0.08);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ad-security-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ad-invite-code-row,
+.ad-wallet-input-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.ad-invite-code-row input,
+.ad-wallet-input-row input {
+  flex: 1;
+}
+
+.ad-otp-info {
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.07);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+.ad-otp-info strong,
+.ad-otp-info span {
+  display: block;
+}
+
+.ad-otp-info span {
+  margin-top: 5px;
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.ad-otp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ad-single-otp {
+  letter-spacing: 8px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.ad-security-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ad-current-qr {
+  margin: 14px 0;
+}
+
+.ad-current-qr img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  background: #fff;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+  .ad-settings-home,
+  .ad-admin-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-invite-code-row,
+  .ad-wallet-input-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 600px) {
+  .ad-settings-card {
+    padding: 20px;
+  }
+
+  .ad-security-heading {
+    flex-direction: column;
+  }
+
+  .ad-otp-grid {
+    grid-template-columns: 1fr;
+  }
+}/* =====================================
+   WALLET & QR COMPACT CARDS
+===================================== */
+
+.ad-wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 18px;
+  align-items: start;
+}
+
+.ad-wallet-card {
+  padding: 18px;
+  border-radius: 14px;
+  background: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ad-wallet-card:nth-child(3) {
+  grid-column: 1;
+}
+
+.ad-wallet-card-header {
+  margin-bottom: 15px;
+}
+
+.ad-wallet-card-header h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.ad-wallet-card-header p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.65;
+}
+
+.ad-wallet-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.ad-wallet-input-row input {
+  flex: 1;
+  min-width: 0;
+}
+
+.ad-wallet-update-btn {
+  white-space: nowrap;
+  padding: 0 15px;
+}
+
+.ad-wallet-qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ad-qr-preview-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ad-wallet-qr-image {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+  display: block;
+}
+
+.ad-qr-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.ad-qr-status {
+  font-size: 12px;
+  color: #22c55e;
+}
+
+.ad-delete-qr-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ad-upload-qr-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.ad-upload-qr-btn input {
+  display: none;
+}
+
+.ad-no-qr {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+.ad-qr-message {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+
+  .ad-wallet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-wallet-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .ad-wallet-input-row {
+    flex-direction: column;
+  }
+
+}/* ======================================
+   WALLET & QR SETTINGS
+====================================== */
+
+.ad-settings-page-header h2 {
+  color: #2563eb;
+}
+
+.ad-settings-page-header .ad-muted {
+  color: #64748b;
+}
+
+
+/* Main Wallet Cards Grid */
+.ad-wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+
+/* Individual Wallet Card */
+.ad-wallet-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ETH Third Card */
+.ad-wallet-card:last-child {
+  grid-column: 1 / 2;
+}
+
+
+/* Wallet Name */
+.ad-wallet-card > label,
+.ad-wallet-card .ad-wallet-title {
+  display: block;
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+/* Inputs */
+.ad-wallet-card input[type="text"] {
+  background: #ffffff;
+  color: #111827;
+  border: 1px solid #d1d5db;
+}
+
+.ad-wallet-card input[type="text"]:focus {
+  border-color: #2563eb;
+}
+
+
+/* QR Upload Title */
+.ad-wallet-qr-upload label {
+  color: #374151;
+  font-weight: 600;
+}
+
+
+/* Green Buttons */
+.ad-wallet-card .ad-primary-btn,
+.ad-wallet-card .ad-delete-qr-btn {
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+}
+
+.ad-wallet-card .ad-primary-btn:hover,
+.ad-wallet-card .ad-delete-qr-btn:hover {
+  background: #15803d;
+}
+
+
+/* Back Button */
+.ad-back-btn {
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #dbeafe;
+}
+
+.ad-back-btn:hover {
+  background: #eff6ff;
+}
+
+
+/* QR Image Box */
+.ad-current-qr {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+}
+
+.ad-current-qr img {
+  background: #ffffff;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .ad-wallet-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-wallet-card:last-child {
+    grid-column: auto;
+  }
+}/* ======================================
+   MAIN ADMIN SETTINGS - MODERN LAYOUT
+====================================== */
+
+/* Main admin settings container */
+.ad-admin-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+
+/* Email & Password Cards */
+.ad-admin-security-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+  margin: 0 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Card Headings */
+.ad-admin-security-section h3 {
+  color: #2563eb;
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+
+/* Description */
+.ad-admin-security-section .ad-muted {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+
+/* Inputs - Proper Wide */
+.ad-admin-security-section input {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 0 14px;
+  margin-bottom: 12px;
+
+  background: #ffffff;
+  color: #111827;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  font-size: 14px;
+}
+
+
+/* Input Focus */
+.ad-admin-security-section input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* Green Buttons */
+.ad-admin-security-section .ad-primary-btn {
+  width: 100%;
+  min-height: 44px;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 9px;
+
+  font-weight: 600;
+}
+
+
+/* Button Hover */
+.ad-admin-security-section .ad-primary-btn:hover:not(:disabled) {
+  background: #15803d;
+}
+
+
+/* Disabled */
+.ad-admin-security-section .ad-primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* Cancel Button */
+.ad-admin-security-section .ad-outline-btn {
+  width: 100%;
+  min-height: 42px;
+  margin-top: 8px;
+
+  background: #ffffff;
+  color: #374151;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+}
+
+
+/* ======================================
+   INVITATION CODE COMPACT CARD
+====================================== */
+
+.ad-invitation-code-card {
+  max-width: 420px;
+  margin-top: 18px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+
+  padding: 16px 18px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+
+.ad-invitation-code-card h3 {
+  color: #2563eb;
+  font-size: 16px;
+  margin: 0 0 10px;
+}
+
+
+.ad-invitation-code-card input {
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+
+  padding: 0 13px;
+  margin-bottom: 10px;
+
+  color: #111827;
+  background: #ffffff;
+}
+
+
+/* Invitation button */
+.ad-invitation-code-card .ad-primary-btn {
+  width: 100%;
+  min-height: 42px;
+
+  background: #16a34a;
+  color: white;
+
+  border: none;
+  border-radius: 9px;
+}
+
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 850px) {
+  .ad-admin-settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-invitation-code-card {
+    max-width: 100%;
+  }
+}
+/* =========================================
+   MAIN ADMIN SETTINGS - COMPACT LAYOUT
+========================================= */
+
+.ad-settings {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ad-settings-page-header {
+  margin-bottom: 16px;
+}
+
+.ad-settings-page-header h2 {
+  margin: 0 0 5px;
+  color: #2563eb;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.ad-muted {
+  color: #64748b;
+  margin: 0;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   ADMIN SUMMARY CARDS
+========================================= */
+
+.ad-admin-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.ad-admin-info-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 12px 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-width: 0;
+}
+
+.ad-admin-info-card span {
+  display: block;
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 5px;
+}
+
+.ad-admin-info-card strong {
+  display: block;
+  color: #1f2937;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   THREE SECURITY CARDS IN ONE ROW
+   Invite + Email + Password
+========================================= */
+
+.ad-admin-security-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+
+
+/* =========================================
+   SECURITY CARD
+========================================= */
+
+.ad-admin-security-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.ad-admin-security-grid .ad-admin-security-section {
+  margin-bottom: 0;
+}
+
+.ad-security-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.ad-security-heading h3 {
+  margin: 0 0 4px;
+  color: #2563eb;
+  font-size: 15px;
+}
+
+.ad-security-heading .ad-muted {
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.ad-security-badge {
+  flex-shrink: 0;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 5px;
+  padding: 4px 6px;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.ad-security-form,
+.ad-invite-code-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ad-security-form input,
+.ad-invite-code-row input,
+.ad-otp-grid input,
+.ad-single-otp {
+  width: 100%;
+  height: 38px;
+  box-sizing: border-box;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  padding: 0 11px;
+  font-size: 12px;
+  outline: none;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.ad-security-form input:focus,
+.ad-invite-code-row input:focus,
+.ad-otp-grid input:focus,
+.ad-single-otp:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================
+   OTP
+========================================= */
+
+.ad-otp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+}
+
+.ad-otp-info {
+  background: #f8fafc;
+  border-radius: 7px;
+  padding: 8px;
+  font-size: 11px;
+  color: #475569;
+}
+
+.ad-otp-info strong,
+.ad-otp-info span {
+  display: block;
+}
+
+.ad-otp-info span {
+  margin-top: 3px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.ad-primary-btn {
+  background: #16a34a;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  min-height: 38px;
+  padding: 0 13px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.ad-primary-btn:hover:not(:disabled) {
+  background: #15803d;
+}
+
+.ad-primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ad-outline-btn {
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  min-height: 36px;
+  padding: 0 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.ad-security-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ad-security-actions button {
+  flex: 1;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.ad-admin-info-card .status,
+.ad-admin-info-card .ad-status,
+.ad-admin-info-card [class*="active"] {
+  color: #16a34a;
+}
+
+
+/* =========================================
+   NOTICE
+========================================= */
+
+.ad-notice {
+  margin-top: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #475569;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.ad-back-btn {
+  background: transparent;
+  border: none;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 14px;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.ad-danger-btn {
+  margin-top: 14px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .ad-admin-security-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-admin-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .ad-admin-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ad-otp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================================
+   MAIN ADMIN - 3 SECURITY CARDS IN ONE ROW
+========================================= */
+
+.ad-admin-security-grid {
+  display: grid !important;
+  grid-template-columns: minmax(220px, 0.9fr) minmax(280px, 1.1fr) minmax(280px, 1.1fr) !important;
+  gap: 14px !important;
+  align-items: stretch;
+  width: 100%;
+  margin-top: 14px;
+}
+
+
+/* =========================================
+   COMMON CARD
+========================================= */
+
+.ad-admin-security-grid .ad-admin-security-section {
+  margin: 0 !important;
+  padding: 16px !important;
+  min-width: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+
+/* INVITATION - LIGHT PURPLE */
+.ad-admin-security-grid
+.ad-admin-security-section:nth-child(1) {
+  background: #f5f3ff;
+}
+
+
+/* PASSWORD - LIGHT ORANGE */
+.ad-admin-security-grid
+.ad-admin-security-section:nth-child(2) {
+  background: #fff7ed;
+}
+
+
+/* EMAIL - LIGHT BLUE */
+.ad-admin-security-grid
+.ad-admin-security-section:nth-child(3) {
+  background: #eff6ff;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.ad-admin-security-grid .ad-security-heading h3 {
+  font-size: 16px;
+  color: #1e293b;
+}
+
+.ad-admin-security-grid .ad-muted {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+
+/* =========================================
+   INPUTS - WIDER / BETTER
+========================================= */
+
+.ad-admin-security-grid input {
+  width: 100% !important;
+  height: 42px !important;
+  box-sizing: border-box;
+  background: #ffffff !important;
+  border: 1px solid #d1d5db !important;
+  border-radius: 8px !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+}
+
+
+/* =========================================
+   INVITATION BUTTONS
+========================================= */
+
+.ad-invite-code-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.ad-invite-code-actions .ad-primary-btn {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.ad-admin-security-grid button {
+  min-height: 40px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ad-primary-btn {
+  background: #16a34a !important;
+  color: #ffffff !important;
+}
+
+
+/* EDIT BUTTON */
+.ad-invite-edit-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* DELETE BUTTON */
+.ad-invite-delete-btn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   SECURITY ACTIONS
+========================================= */
+
+.ad-security-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ad-security-actions button {
+  flex: 1;
+}
+
+/* =========================================
+   MAIN ADMIN SETTINGS - THREE CARDS
+========================================= */
+
+.ad-admin-three-cards {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  width: 100% !important;
+  margin-top: 18px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  align-items: stretch !important;
+}
+
+
+/* THREE CARDS BACKGROUND */
+.ad-admin-three-cards .ad-admin-small-card {
+  background: #0b1f3a !important;
+  border: 1px solid #23466d !important;
+  border-radius: 12px !important;
+  padding: 18px !important;
+  min-width: 0 !important;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.20) !important;
+}
+
+
+/* CARD HEADINGS */
+.ad-admin-three-cards .ad-small-card-header h3 {
+  color: #60a5fa !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+
+/* CARD DESCRIPTION */
+.ad-admin-three-cards .ad-small-description {
+  color: #c0cde0 !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+
+/* BADGES */
+.ad-admin-three-cards .ad-small-badge {
+  background: #173b63 !important;
+  color: #93c5fd !important;
+  border: 1px solid #315c88 !important;
+  padding: 6px 9px !important;
+  border-radius: 6px !important;
+  font-size: 10px !important;
+}
+
+
+/* INPUT FIELDS */
+.ad-admin-three-cards input {
+  width: 100% !important;
+  height: 46px !important;
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  padding: 0 13px !important;
+  font-size: 13px !important;
+  box-sizing: border-box !important;
+}
+
+
+/* FORM SPACING */
+.ad-admin-three-cards .ad-small-card-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 9px !important;
+}
+
+
+/* GREEN BUTTONS */
+.ad-admin-three-cards .ad-primary-btn {
+  width: 100% !important;
+  min-height: 43px !important;
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+}
+
+
+/* EDIT + CLEAR BUTTONS */
+.ad-admin-three-cards .ad-invite-actions {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 8px !important;
+}
+
+.ad-admin-three-cards .ad-invite-edit-btn {
+  background: #2563eb !important;
+  color: white !important;
+  min-height: 40px !important;
+  border: none !important;
+  border-radius: 7px !important;
+}
+
+.ad-admin-three-cards .ad-invite-delete-btn {
+  background: #dc2626 !important;
+  color: white !important;
+  min-height: 40px !important;
+  border: none !important;
+  border-radius: 7px !important;
+}
+
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .ad-admin-three-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+
+/* MOBILE */
+@media (max-width: 650px) {
+  .ad-admin-three-cards {
+    grid-template-columns: 1fr !important;
+  }
+}/* MAIN ADMIN SETTINGS TOP HEADING */
+.ad-main-summary-card {
+  background: #0b1f3a !important;
+  border: 1px solid #23466d !important;
+  border-radius: 12px !important;
+}
+
+/* MAIN ADMIN TITLE */
+.ad-main-summary-card h2,
+.ad-main-summary-card h3 {
+  color: #60a5fa !important;
+}
+
+/* ACTIVE BADGE GREEN */
+.ad-main-summary-card .ad-small-badge {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border: 1px solid #15803d !important;
+}
+/* SETTINGS TOP HEADING CARD */
+.ad-settings-page > :first-child {
+  background: #0b1f3a !important;
+  border: 1px solid #23466d !important;
+  border-radius: 12px !important;
+}
+
+/* SETTINGS HEADING */
+.ad-settings-page h1,
+.ad-settings-page h2 {
+  color: #60a5fa !important;
+}
+
+/* BACK TO SETTINGS BUTTON */
+.ad-back-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 22px !important;
+  min-height: 46px !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  background: #173b63 !important;
+  color: #ffffff !important;
+  border: 1px solid #315c88 !important;
+  border-radius: 9px !important;
+  cursor: pointer !important;
+}
+
+.ad-back-btn:hover {
+  background: #2563a8 !important;
+  color: #ffffff !important;
+}/* =====================================
+   WALLET & QR SETTINGS CARDS
+===================================== */
+
+.ad-settings-page .ad-wallet-card,
+.ad-settings-page .wallet-card,
+.ad-settings-page .ad-qr-card {
+  background: #0b1f3a !important;
+  border: 1px solid #23466d !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+}
+
+/* WALLET CARD HEADINGS */
+.ad-settings-page .ad-wallet-card h3,
+.ad-settings-page .wallet-card h3,
+.ad-settings-page .ad-qr-card h3 {
+  color: #60a5fa !important;
+}
+
+/* WALLET LABELS */
+.ad-settings-page .ad-wallet-card label,
+.ad-settings-page .wallet-card label,
+.ad-settings-page .ad-qr-card label {
+  color: #c0cde0 !important;
+}
+
+/* WALLET INPUTS */
+.ad-settings-page .ad-wallet-card input,
+.ad-settings-page .wallet-card input,
+.ad-settings-page .ad-qr-card input {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-radius: 8px !important;
+}
+
+/* UPDATE BUTTON */
+.ad-settings-page .ad-wallet-card button,
+.ad-settings-page .wallet-card button,
+.ad-settings-page .ad-qr-card button {
+  border-radius: 8px !important;
+}
+
+/* =========================================
+   FINAL THEME - WALLET & QR SETTINGS
+   SAME AS MAIN ADMIN THREE CARDS
+========================================= */
+
+/* WALLET CARDS - DARK BLUE */
+.ad-wallet-grid .ad-wallet-card {
+  background: #0b1f3a !important;
+  background-image: none !important;
+  border: 1px solid #23466d !important;
+  border-radius: 12px !important;
+  padding: 18px !important;
+  color: #ffffff !important;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.20) !important;
+}
+
+/* WALLET HEADINGS - BLUE */
+.ad-wallet-card h3,
+.ad-wallet-card .ad-wallet-title {
+  color: #60a5fa !important;
+}
+
+/* WALLET DESCRIPTION AND LABELS */
+.ad-wallet-card p,
+.ad-wallet-card label,
+.ad-wallet-card span {
+  color: #c0cde0 !important;
+}
+
+/* INPUTS - WHITE */
+.ad-wallet-card input {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+}
+
+/* UPDATE BUTTON - GREEN */
+.ad-wallet-card .ad-wallet-update-btn,
+.ad-wallet-card .ad-primary-btn {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border: 1px solid #15803d !important;
+  border-radius: 8px !important;
+}
+
+/* UPLOAD BUTTON - GREEN */
+.ad-wallet-card .ad-upload-qr-btn {
+  background: #16a34a !important;
+  color: #ffffff !important;
+  border: 1px solid #15803d !important;
+}
+
+/* DELETE QR - FULL RED */
+.ad-wallet-card .ad-delete-qr-btn {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  border: 1px solid #b91c1c !important;
+}
+
+/* BUTTON HOVER */
+.ad-wallet-card .ad-primary-btn:hover,
+.ad-wallet-card .ad-wallet-update-btn:hover,
+.ad-wallet-card .ad-upload-qr-btn:hover {
+  background: #15803d !important;
+}
+
+.ad-wallet-card .ad-delete-qr-btn:hover {
+  background: #b91c1c !important;
+}
+
+/* QR PREVIEW */
+.ad-wallet-card .ad-wallet-qr-image {
+  background: #ffffff !important;
+  border: 1px solid #315c88 !important;
+  border-radius: 8px !important;
+}
+
+/* QR STATUS - GREEN */
+.ad-wallet-card .ad-qr-status {
+  color: #4ade80 !important;
+}
+
+/* NO QR MESSAGE */
+.ad-wallet-card .ad-no-qr {
+  color: #c0cde0 !important;
+}
+
+/* QR MESSAGE */
+.ad-wallet-card .ad-qr-message {
+  color: #c0cde0 !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  .ad-wallet-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ad-wallet-card:last-child {
+    grid-column: auto !important;
+  }
+}
